@@ -11,21 +11,35 @@ import javax.persistence.Id;
 public class Bar {
 	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long idBar;
+	private String nom;
 	private String localisation;
 	private String adresse;
 	private LocalTime deb_happ;
 	private LocalTime fin_happ;
-	public Bar() {
+	
+	
+	public Bar(String nom, String localisation, String adresse, LocalTime deb_happ, LocalTime fin_happ) {
 		super();
-		// TODO Auto-generated constructor stub
-	}
-	public Bar(String localisation, String adresse, LocalTime deb_happ, LocalTime fin_happ) {
-		super();
+		this.nom = nom;
 		this.localisation = localisation;
 		this.adresse = adresse;
 		this.deb_happ = deb_happ;
 		this.fin_happ = fin_happ;
 	}
+
+	public String getNom() {
+		return nom;
+	}
+
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+	
+	public Bar() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
 	public Long getIdBar() {
 		return idBar;
 	}
