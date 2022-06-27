@@ -28,6 +28,15 @@ public class User {
 		this.password = password;
 		this.pref = pref;
 	}
+	
+	
+	public User(String nom, String prenom, String mail, String password) {
+		super();
+		this.nom = nom;
+		this.prenom = prenom;
+		this.mail = mail;
+		this.password = password;
+	}
 	public Long getIdUser() {
 		return idUser;
 	}
