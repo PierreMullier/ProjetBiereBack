@@ -9,12 +9,16 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
 import fr.projetBiere.dao.BarRepository;
+import fr.projetBiere.dao.BiereRepository;
 import fr.projetBiere.entities.Bar;
+import fr.projetBiere.entities.Categorie;
 
 @SpringBootApplication
 public class ProjetBiereApplication implements CommandLineRunner{
 	@Autowired
 	BarRepository barRepo;
+	@Autowired
+	BiereRepository biereRepo;
 	
 	public static void main(String[] args)  {
 		SpringApplication.run(ProjetBiereApplication.class, args);
@@ -28,6 +32,9 @@ public class ProjetBiereApplication implements CommandLineRunner{
 		
 		Bar b1 = new Bar("nom", "localisation", "adresse", t1, t2);
 		barRepo.save(b1);
+		
+		Categorie c1 = new Categorie("testCat");
+		
 		System.out.println("run success");
 	}
 
