@@ -14,6 +14,12 @@ public class Categorie {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	
+	public Categorie(Long idCat) {
+		super();
+		this.idCat = idCat;
+	}
+
 	public Categorie(String nomCat) {
 		super();
 		this.nomCat = nomCat;

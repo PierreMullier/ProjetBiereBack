@@ -22,6 +22,10 @@ public class Style {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	public Style(Long idStyle) {
+		super();
+		this.idStyle = idStyle;
+	}
 	public Long getIdStyle() {
 		return idStyle;
 	}
