@@ -1,0 +1,11 @@
+[{"idCat":1, "nomCat":"British Ale"},
+ {"idCat":2, "nomCat":"Irish Ale"},
+ {"idCat":3, "nomCat":"North American Ale"},
+ {"idCat":4, "nomCat":"German Ale"},
+ {"idCat":5, "nomCat":"Belgian and French Ale"},
+ {"idCat":6, "nomCat":"International Ale"},
+ {"idCat":7, "nomCat":"German Lager"},
+ {"idCat":8, "nomCat":"North American Lager"},
+ {"idCat":9, "nomCat":"Other Lager"},
+ {"idCat":10, "nomCat":"International Lager"},
+ {"idCat":11, "nomCat":"Other Style"}]

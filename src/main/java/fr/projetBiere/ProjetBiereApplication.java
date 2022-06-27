@@ -11,6 +11,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import fr.projetBiere.dao.BarRepository;
 import fr.projetBiere.dao.BiereRepository;
 import fr.projetBiere.dao.CategorieRepository;
+import fr.projetBiere.dao.ImportDataFromJson;
 import fr.projetBiere.dao.PreferenceRepository;
 import fr.projetBiere.dao.StyleRepository;
 import fr.projetBiere.dao.UserRepository;
@@ -63,7 +64,7 @@ public class ProjetBiereApplication implements CommandLineRunner{
 		
 		User u1 = new User("Pierre", "Mullier", "123@456.789", "test", p1);
 		userRepo.save(u1);
-		
+		ImportDataFromJson.insertData(categorieRepo,styleRepo,biereRepo);
 		System.out.println("run success");
 	}
 

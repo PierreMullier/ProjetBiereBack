@@ -1,5 +1,6 @@
 package fr.projetBiere.entities;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -17,6 +18,7 @@ public class Biere {
 	private Style style;
 	
 	private double degre;
+	@Column(length = 65555)
 	private String description;
 	public Long getIdBiere() {
 		return idBiere;
