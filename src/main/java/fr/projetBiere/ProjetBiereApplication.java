@@ -47,7 +47,7 @@ public class ProjetBiereApplication implements CommandLineRunner{
 		styleRepo.save(s1);
 		
 		Biere bi1 = new Biere("La bière de Pierre", c1, s1, 11.0, "Elle est bonne");
-		biereRepo.save(bi1);
+		biereRepo.save(bi1); 
 		
 		
 		System.out.println("run success");
