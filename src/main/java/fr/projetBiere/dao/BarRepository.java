@@ -10,4 +10,6 @@ public interface BarRepository extends CrudRepository<Bar, Long> {
 
 	List<Bar> findByAdresseLike(String codePostal);
 
+	List<Bar> findByNomLike(String string);
+
 }

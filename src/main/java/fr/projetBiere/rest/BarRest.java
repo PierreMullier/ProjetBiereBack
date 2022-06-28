@@ -67,5 +67,10 @@ public class BarRest {
 		return barRepo.findByAdresseLike("%"+codePostal+"%");
 	}
 	
+	@GetMapping("bar/nom/{nom}")
+	public List<Bar> getBarByNom(@PathVariable String nom){
+		return barRepo.findByNomLike("%"+nom+"%");
+	}
+	
 }
 
