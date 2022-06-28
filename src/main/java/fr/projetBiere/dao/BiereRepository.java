@@ -8,6 +8,7 @@ import fr.projetBiere.entities.Biere;
 
 public interface BiereRepository extends CrudRepository<Biere, Long> {
 
-	Optional<Biere> findByName(String nom);
+
+	Optional<Biere> findByNom(String nom);
 
 }
