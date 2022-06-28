@@ -12,4 +12,8 @@ public interface BarRepository extends CrudRepository<Bar, Long> {
 
 	List<Bar> findByNomLike(String string);
 
+	List<Bar> findByFinHapp(String string);
+
+	List<Bar> findByDebHappLessThanAndFinHappGreaterThan(String heure, String heure2);
+
 }

@@ -20,6 +20,10 @@ public class Biere {
 	private double degre;
 	
 	
+	public Biere(Long idBiere) {
+		super();
+		this.idBiere = idBiere;
+	}
 	@Column(length = 65555)
 	private String description;
 	
@@ -28,7 +32,7 @@ public class Biere {
 	}
 	public void setIdBiere(Long idBiere) {
 		this.idBiere = idBiere;
-	}
+	}	
 	public String getNom() {
 		return nom;
 	}

@@ -10,6 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import fr.projetBiere.dao.BarRepository;
 import fr.projetBiere.dao.BiereRepository;
+import fr.projetBiere.dao.CarteRepository;
 import fr.projetBiere.dao.CategorieRepository;
 import fr.projetBiere.dao.ImportDataFromJson;
 import fr.projetBiere.dao.PreferenceRepository;
@@ -36,6 +37,8 @@ public class ProjetBiereApplication implements CommandLineRunner{
 	UserRepository userRepo;
 	@Autowired
 	PreferenceRepository prefRepo;
+	@Autowired
+	CarteRepository carteRepo;
 	
 	public static void main(String[] args)  {
 		SpringApplication.run(ProjetBiereApplication.class, args);
@@ -62,9 +65,9 @@ public class ProjetBiereApplication implements CommandLineRunner{
 		Preference p1= new Preference("test", 4, 11.8, "Leffe");
 		prefRepo.save(p1);
 		
-		User u1 = new User("Pierre", "Mullier", "123@456.789", "test", p1);
+		User u1 = new User("Pierre", "Mullier ", "123@456.789", "test", p1);
 		userRepo.save(u1);
-		ImportDataFromJson.insertData(categorieRepo,styleRepo,biereRepo,barRepo,userRepo);
+		ImportDataFromJson.insertData(categorieRepo,styleRepo,biereRepo,barRepo,userRepo,carteRepo);
 		System.out.println("run success");
 	}
 

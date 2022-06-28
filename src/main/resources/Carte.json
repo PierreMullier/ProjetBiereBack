@@ -1,0 +1,367 @@
+[
+ {
+   "bar": 1,
+   "biere": 117,
+   "prix": 7
+ },
+ {
+   "bar": 1,
+   "biere": 118,
+   "prix": 7
+ },
+ {
+   "bar": 3,
+   "biere": 119,
+   "prix": 6
+ },
+ {
+   "bar": 3,
+   "biere": 120,
+   "prix": 8
+ },
+ {
+   "bar": 3,
+   "biere": 121,
+   "prix": 5
+ },
+ {
+   "bar": 3,
+   "biere": 122,
+   "prix": 6
+ },
+ {
+   "bar": 3,
+   "biere": 123,
+   "prix": 7.5
+ },
+ {
+   "bar": 4,
+   "biere": 118,
+   "prix": 7
+ },
+ {
+   "bar": 4,
+   "biere": 124,
+   "prix": 8
+ },
+ {
+   "bar": 5,
+   "biere": 118,
+   "prix": 7
+ },
+ {
+   "bar": 5,
+   "biere": 124,
+   "prix": 8.5
+ },
+ {
+   "bar": 5,
+   "biere": 121,
+   "prix": 5
+ },
+ {
+   "bar": 8,
+   "biere": 124,
+   "prix": 7.5
+ },
+ {
+   "bar": 8,
+   "biere": 125,
+   "prix": 6
+ },
+ {
+   "bar": 9,
+   "biere": 118,
+   "prix": 7
+ },
+ {
+   "bar": 9,
+   "biere": 126,
+   "prix": 9
+ },
+ {
+   "bar": 10,
+   "biere": 127,
+   "prix": 10
+ },
+ {
+   "bar": 10,
+   "biere": 124,
+   "prix": 8
+ },
+ {
+   "bar": 10,
+   "biere": 128,
+   "prix": 7
+ },
+ {
+   "bar": 11,
+   "biere": 124,
+   "prix": 8
+ },
+ {
+   "bar": 11,
+   "biere": 129,
+   "prix": 7.5
+ },
+ {
+   "bar": 12,
+   "biere": 130,
+   "prix": 8
+ },
+ {
+   "bar": 12,
+   "biere": 121,
+   "prix": 5
+ },
+ {
+   "bar": 14,
+   "biere": 125,
+   "prix": 6.5
+ },
+ {
+   "bar": 14,
+   "biere": 124,
+   "prix": 7
+ },
+ {
+   "bar": 19,
+   "biere": 124,
+   "prix": 7.5
+ },
+ {
+   "bar": 19,
+   "biere": 131,
+   "prix": 12
+ },
+ {
+   "bar": 21,
+   "biere": 123,
+   "prix": 8
+ },
+ {
+   "bar": 21,
+   "biere": 124,
+   "prix": 7.5
+ },
+ {
+   "bar": 22,
+   "biere": 124,
+   "prix": 7
+ },
+ {
+   "bar": 22,
+   "biere": 132,
+   "prix": 11
+ },
+ {
+   "bar": 22,
+   "biere": 133,
+   "prix": 5
+ },
+ {
+   "bar": 23,
+   "biere": 124,
+   "prix": 8
+ },
+ {
+   "bar": 23,
+   "biere": 127,
+   "prix": 10
+ },
+ {
+   "bar": 27,
+   "biere": 118,
+   "prix": 7
+ },
+ {
+   "bar": 27,
+   "biere": 121,
+   "prix": 5
+ },
+ {
+   "bar": 27,
+   "biere": 127,
+   "prix": 9
+ },
+ {
+   "bar": 27,
+   "biere": 124,
+   "prix": 8
+ },
+ {
+   "bar": 27,
+   "biere": 134,
+   "prix": 7
+ },
+ {
+   "bar": 29,
+   "biere": 127,
+   "prix": 9.5
+ },
+ {
+   "bar": 29,
+   "biere": 118,
+   "prix": 7
+ },
+ {
+   "bar": 29,
+   "biere": 122,
+   "prix": 6
+ },
+ {
+   "bar": 29,
+   "biere": 124,
+   "prix": 7.5
+ },
+ {
+   "bar": 31,
+   "biere": 121,
+   "prix": 5
+ },
+ {
+   "bar": 31,
+   "biere": 122,
+   "prix": 6.5
+ },
+ {
+   "bar": 31,
+   "biere": 123,
+   "prix": 7.5
+ },
+ {
+   "bar": 32,
+   "biere": 124,
+   "prix": 7
+ },
+ {
+   "bar": 32,
+   "biere": 127,
+   "prix": 10
+ },
+ {
+   "bar": 32,
+   "biere": 118,
+   "prix": 7
+ },
+ {
+   "bar": 33,
+   "biere": 124,
+   "prix": 8
+ },
+ {
+   "bar": 33,
+   "biere": 135,
+   "prix": 9
+ },
+ {
+   "bar": 33,
+   "biere": 120,
+   "prix": 8
+ },
+ {
+   "bar": 33,
+   "biere": 118,
+   "prix": 7
+ },
+ {
+   "bar": 33,
+   "biere": 134,
+   "prix": 7.5
+ },
+ {
+   "bar": 34,
+   "biere": 121,
+   "prix": 5
+ },
+ {
+   "bar": 34,
+   "biere": 118,
+   "prix": 7
+ },
+ {
+   "bar": 34,
+   "biere": 127,
+   "prix": 8.5
+ },
+ {
+   "bar": 34,
+   "biere": 122,
+   "prix": 6.5
+ },
+ {
+   "bar": 34,
+   "biere": 123,
+   "prix": 8
+ },
+ {
+   "bar": 36,
+   "biere": 118,
+   "prix": 7
+ },
+ {
+   "bar": 36,
+   "biere": 127,
+   "prix": 9
+ },
+ {
+   "bar": 36,
+   "biere": 134,
+   "prix": 7
+ },
+ {
+   "bar": 38,
+   "biere": 124,
+   "prix": 8.5
+ },
+ {
+   "bar": 38,
+   "biere": 136,
+   "prix": 6
+ },
+ {
+   "bar": 41,
+   "biere": 137,
+   "prix": 13
+ },
+ {
+   "bar": 41,
+   "biere": 130,
+   "prix": 8
+ },
+ {
+   "bar": 41,
+   "biere": 135,
+   "prix": 9
+ },
+ {
+   "bar": 42,
+   "biere": 124,
+   "prix": 8
+ },
+ {
+   "bar": 42,
+   "biere": 138,
+   "prix": 9
+ },
+ {
+   "bar": 44,
+   "biere": 134,
+   "prix": 7
+ },
+ {
+   "bar": 44,
+   "biere": 78,
+   "prix": 8
+ },
+ {
+   "bar": 48,
+   "biere": 124,
+   "prix": 8.5
+ },
+ {
+   "bar": 48,
+   "biere": 139,
+   "prix": 11
+ }
+]

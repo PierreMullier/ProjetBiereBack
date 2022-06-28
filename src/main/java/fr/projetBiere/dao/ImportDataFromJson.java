@@ -9,13 +9,14 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import fr.projetBiere.entities.Bar;
 import fr.projetBiere.entities.Biere;
+import fr.projetBiere.entities.Carte;
 import fr.projetBiere.entities.Categorie;
 import fr.projetBiere.entities.Style;
 import fr.projetBiere.entities.User;
 
 public class ImportDataFromJson {
 
-    public static void insertData(CategorieRepository categorieRepo, StyleRepository styleRepo, BiereRepository biereRepo,BarRepository barRepo, UserRepository userRepo) {
+    public static void insertData(CategorieRepository categorieRepo, StyleRepository styleRepo, BiereRepository biereRepo,BarRepository barRepo, UserRepository userRepo, CarteRepository carteRepo) {
         ObjectMapper mapper = new ObjectMapper();
 
 
@@ -84,6 +85,20 @@ public class ImportDataFromJson {
             List<User> users = mapper.readValue(inputStream5, typeReference5);
             for (User user:users) {
                 userRepo.save(user);
+                }
+                System.out.println("users saved");
+            } catch (IOException e) {
+                System.out.println("Unable to save users: " + e.getMessage());
+            }
+        
+        TypeReference<List<Carte>> typeReference6 = new TypeReference<List<Carte>>() {
+        };
+        InputStream inputStream6 = TypeReference.class.getResourceAsStream("/Carte.json");
+
+        try {
+            List<Carte> cartes = mapper.readValue(inputStream6, typeReference6);
+            for (Carte carte:cartes) {
+                carteRepo.save(carte);
                 }
                 System.out.println("users saved");
             } catch (IOException e) {

@@ -12,21 +12,38 @@ public class Bar {
 	private String nom;
 	private String localisation;
 	private String adresse;
-	private String deb_happ;
-	private String fin_happ;
+	private String debHapp;
+	private String finHapp;
 	private String siteWeb;
-	public Bar(String nom, String localisation, String adresse, String deb_happ, String fin_happ, String siteWeb) {
+	
+	public Bar() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public Bar(String nom, String localisation, String adresse, String debHapp, String finHapp, String siteWeb) {
 		super();
 		this.nom = nom;
 		this.localisation = localisation;
 		this.adresse = adresse;
-		this.deb_happ = deb_happ;
-		this.fin_happ = fin_happ;
+		this.debHapp = debHapp;
+		this.finHapp = finHapp;
 		this.siteWeb = siteWeb;
 	}
-	public Bar() {
+	public Bar(Long idBar) {
 		super();
-		// TODO Auto-generated constructor stub
+		this.idBar = idBar;
+	}
+	public String getDebHapp() {
+		return debHapp;
+	}
+	public void setDebHapp(String debHapp) {
+		this.debHapp = debHapp;
+	}
+	public String getFinHapp() {
+		return finHapp;
+	}
+	public void setFinHapp(String finHapp) {
+		this.finHapp = finHapp;
 	}
 	public Long getIdBar() {
 		return idBar;
@@ -52,18 +69,7 @@ public class Bar {
 	public void setAdresse(String adresse) {
 		this.adresse = adresse;
 	}
-	public String getDeb_happ() {
-		return deb_happ;
-	}
-	public void setDeb_happ(String deb_happ) {
-		this.deb_happ = deb_happ;
-	}
-	public String getFin_happ() {
-		return fin_happ;
-	}
-	public void setFin_happ(String fin_happ) {
-		this.fin_happ = fin_happ;
-	}
+	
 	public String getSiteWeb() {
 		return siteWeb;
 	}

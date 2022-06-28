@@ -27,13 +27,13 @@ public class Carte {
 		// TODO Auto-generated constructor stub
 	}
 	public Bar getBar() {
-		return bar;
+		return bar; 
 	}
 	public void setBar(Bar bar) {
 		this.bar = bar;
 	}
 	public Biere getBiere() {
-		return biere;
+		return biere; 
 	}
 	public void setBiere(Biere biere) {
 		this.biere = biere;

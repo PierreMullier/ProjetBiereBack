@@ -67,9 +67,19 @@ public class BarRest {
 		return barRepo.findByAdresseLike("%"+codePostal+"%");
 	}
 	
-	@GetMapping("bar/nom/{nom}")
+	@GetMapping("bar/nom/{nom}") 
 	public List<Bar> getBarByNom(@PathVariable String nom){
 		return barRepo.findByNomLike("%"+nom+"%");
+	}
+	
+	@GetMapping("bar/finHapp/{finHapp}")
+	public List<Bar> getBarByHappyHour(@PathVariable String finHapp){
+		return barRepo.findByFinHapp(finHapp);
+	}
+	
+	@GetMapping("bar/happyHours/{heure}")
+	public List<Bar> getBarBetweenHappyHours(@PathVariable String heure){
+		return barRepo.findByDebHappLessThanAndFinHappGreaterThan(heure,heure);
 	}
 	
 }
