@@ -82,5 +82,10 @@ public class BarRest {
 		return barRepo.findByDebHappLessThanAndFinHappGreaterThan(heure,heure);
 	}
 	
+	//@GetMapping("bar/prix/{prixMax}")
+	//public List<Bar> getBarByPriceBeer(@PathVariable double prixMax){
+	//	return barRepo.findByCarteLessThan(prixMax);
+	//}
+	
 }
 

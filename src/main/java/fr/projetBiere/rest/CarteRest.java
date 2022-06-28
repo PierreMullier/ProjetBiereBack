@@ -1,5 +1,6 @@
 package fr.projetBiere.rest;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,8 +40,13 @@ public class CarteRest {
 	}
 	
 	
-	@GetMapping("/cartes/{id}")
-	public Optional<Carte> getcarteById(@PathVariable Long id){
-		return (Optional<Carte>) carteRepo.findById(id);
+	@GetMapping("/cartes/bar/{id}")
+	public List<Carte> getcarteByBarId(@PathVariable Long id){
+		return (List<Carte>) carteRepo.findByBarIdBar(id);
+	}
+	
+	@GetMapping("/cartes/biere/{id}")
+	public List<Carte> getcarteByBiereId(@PathVariable Long id){
+		return (List<Carte>) carteRepo.findByBiereIdBiere(id);
 	}
 }

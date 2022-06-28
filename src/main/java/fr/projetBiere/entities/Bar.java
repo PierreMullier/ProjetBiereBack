@@ -15,7 +15,7 @@ public class Bar {
 	private String debHapp;
 	private String finHapp;
 	private String siteWeb;
-	
+	 
 	public Bar() {
 		super();
 		// TODO Auto-generated constructor stub

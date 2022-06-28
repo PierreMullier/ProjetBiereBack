@@ -16,4 +16,6 @@ public interface BarRepository extends CrudRepository<Bar, Long> {
 
 	List<Bar> findByDebHappLessThanAndFinHappGreaterThan(String heure, String heure2);
 
+	//List<Bar> findByCarteLessThan(double prixMax);
+
 }
