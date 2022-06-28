@@ -65,4 +65,14 @@ public class BiereRest {
 	public Optional<Biere> getbiereByName(@PathVariable String nom){
 		return (Optional<Biere>) biereRepo.findByNom(nom);
 	}
+	
+	@GetMapping("/biere/taux/{degre}")
+	public List<Biere> getbiereByAlcool(@PathVariable double degre){
+		return (List<Biere>) biereRepo.findByDegre(degre);
+	}
+	
+	@GetMapping("/biere/style/{style_id_style}")
+	public List<Biere> getbiereByStyle(@PathVariable Long style_id_style){
+		return (List<Biere>) biereRepo.findByStyleIdStyle(style_id_style);
+	}
 }

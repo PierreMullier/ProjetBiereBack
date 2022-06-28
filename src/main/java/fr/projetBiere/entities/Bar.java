@@ -16,7 +16,7 @@ public class Bar {
 	private String adresse;
 	private LocalTime deb_happ;
 	private LocalTime fin_happ;
-	
+	private String mail;
 	
 	public Bar(String nom, String localisation, String adresse, LocalTime deb_happ, LocalTime fin_happ) {
 		super();

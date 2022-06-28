@@ -19,6 +19,7 @@ public class Biere {
 	
 	private double degre;
 	
+	
 	@Column(length = 65555)
 	private String description;
 	
