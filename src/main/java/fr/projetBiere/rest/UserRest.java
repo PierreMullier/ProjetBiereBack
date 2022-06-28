@@ -52,7 +52,7 @@ public class UserRest {
         if (b1.isEmpty()) {
             return null;
         } else {
-            b.setIdUser(id);
+            b.setId_user(id);
             return userRepo.save(b);
         }
 	}

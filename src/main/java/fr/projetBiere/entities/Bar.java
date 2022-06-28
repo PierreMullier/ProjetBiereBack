@@ -1,7 +1,5 @@
 package fr.projetBiere.entities;
 
-import java.time.LocalTime;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -17,10 +15,7 @@ public class Bar {
 	private String deb_happ;
 	private String fin_happ;
 	private String siteWeb;
-	
-
-	public Bar(String nom, String localisation, String adresse, String deb_happ, String fin_happ,
-			String siteWeb) {
+	public Bar(String nom, String localisation, String adresse, String deb_happ, String fin_happ, String siteWeb) {
 		super();
 		this.nom = nom;
 		this.localisation = localisation;
@@ -29,42 +24,21 @@ public class Bar {
 		this.fin_happ = fin_happ;
 		this.siteWeb = siteWeb;
 	}
-
-	public String getSiteWeb() {
-		return siteWeb;
-	}
-
-	public void setSiteWeb(String siteWeb) {
-		this.siteWeb = siteWeb;
-	}
-
-	public Bar(String nom, String localisation, String adresse, String deb_happ, String fin_happ) {
-		super();
-		this.nom = nom;
-		this.localisation = localisation;
-		this.adresse = adresse;
-		this.deb_happ = deb_happ;
-		this.fin_happ = fin_happ;
-	}
-
-	public String getNom() {
-		return nom;
-	}
-
-	public void setNom(String nom) {
-		this.nom = nom;
-	}
-	
 	public Bar() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	
 	public Long getIdBar() {
 		return idBar;
 	}
 	public void setIdBar(Long idBar) {
 		this.idBar = idBar;
+	}
+	public String getNom() {
+		return nom;
+	}
+	public void setNom(String nom) {
+		this.nom = nom;
 	}
 	public String getLocalisation() {
 		return localisation;
@@ -90,6 +64,13 @@ public class Bar {
 	public void setFin_happ(String fin_happ) {
 		this.fin_happ = fin_happ;
 	}
+	public String getSiteWeb() {
+		return siteWeb;
+	}
+	public void setSiteWeb(String siteWeb) {
+		this.siteWeb = siteWeb;
+	}
+	
 	
 
 }

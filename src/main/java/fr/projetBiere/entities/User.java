@@ -9,7 +9,7 @@ import javax.persistence.ManyToOne;
 @Entity
 public class User {
 	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
-	private Long idUser;
+	private Long id_user;
 	private String nom;
 	private String prenom;
 	private String mail;
@@ -37,11 +37,13 @@ public class User {
 		this.mail = mail;
 		this.password = password;
 	}
-	public Long getIdUser() {
-		return idUser;
+	
+	
+	public Long getId_user() {
+		return id_user;
 	}
-	public void setIdUser(Long idUser) {
-		this.idUser = idUser;
+	public void setId_user(Long id_user) {
+		this.id_user = id_user;
 	}
 	public String getNom() {
 		return nom;

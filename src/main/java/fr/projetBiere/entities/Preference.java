@@ -10,7 +10,7 @@ public class Preference {
 	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long idPref;
 	
-	private String nomStype;
+	private String nomStyle;
 	private double prix;
 	private double tauxAlcool;
 	private String nomBiere;
@@ -24,7 +24,7 @@ public class Preference {
 
 	public Preference(String nomStype, double prix, double tauxAlcool, String nomBiere) {
 		super();
-		this.nomStype = nomStype;
+		this.nomStyle = nomStype;
 		this.prix = prix;
 		this.tauxAlcool = tauxAlcool;
 		this.nomBiere = nomBiere;
@@ -42,12 +42,12 @@ public class Preference {
 
 
 	public String getNomStype() {
-		return nomStype;
+		return nomStyle;
 	}
 
 
 	public void setNomStype(String nomStype) {
-		this.nomStype = nomStype;
+		this.nomStyle = nomStype;
 	}
 
 

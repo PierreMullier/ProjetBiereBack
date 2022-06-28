@@ -1,0 +1,5 @@
+[{"id_user":1, "mail":"biouclem@gmail.com", "nom":"BIOU", "prenom":"Cl\u00e9ment", "password":"test", "pref":null},
+ {"id_user":2, "mail":"pierre.mullier2@gmail.com", "nom":"MULLIER", "prenom":"Pierre", "password":"root", "pref":null},
+ {"id_user":3, "mail":"tojean@esic.fr", "nom":"TOUSSAINT", "prenom":"Jean", "password":"azerty", "pref":null},
+ {"id_user":4, "mail":"bonoe@esic.fr", "nom":"BOUFLET", "prenom":"No\u00e9", "password":"coucou", "pref":null},
+ {"id_user":5, "mail":"pacedric@esic.fr", "nom":"PARIS", "prenom":"C\u00e9dric", "password":"vivelecovid", "pref":null}]

@@ -44,11 +44,11 @@ public class ProjetBiereApplication implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 		// TODO Auto-generated method stub
-		LocalTime t1 =LocalTime.of(16, 0);
-		LocalTime t2 = LocalTime.of(22, 0);	
+		//LocalTime t1 =LocalTime.of(16, 0);
+		//LocalTime t2 = LocalTime.of(22, 0);	
 		
-		Bar b1 = new Bar("nom", "localisation", "adresse", t1, t2);
-		barRepo.save(b1);
+		//Bar b1 = new Bar("nom", "localisation", "adresse", "16:00:00", "22:00:00", "erre.fr");
+		//barRepo.save(b1);
 		
 		Categorie c1 = new Categorie("testCat");
 		categorieRepo.save(c1);
@@ -64,7 +64,7 @@ public class ProjetBiereApplication implements CommandLineRunner{
 		
 		User u1 = new User("Pierre", "Mullier", "123@456.789", "test", p1);
 		userRepo.save(u1);
-		ImportDataFromJson.insertData(categorieRepo,styleRepo,biereRepo);
+		ImportDataFromJson.insertData(categorieRepo,styleRepo,biereRepo,barRepo,userRepo);
 		System.out.println("run success");
 	}
 

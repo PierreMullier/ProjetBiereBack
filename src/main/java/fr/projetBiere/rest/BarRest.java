@@ -62,4 +62,10 @@ public class BarRest {
 	public Optional<Bar> getBarById(@PathVariable Long id){
 		return (Optional<Bar>) barRepo.findById(id);
 	}
+	@GetMapping("bar/adresse/{codePostal}")
+	public List<Bar> getBarByQuartier(@PathVariable String codePostal){
+		return barRepo.findByAdresseLike("%"+codePostal+"%");
+	}
+	
 }
+
