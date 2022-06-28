@@ -16,8 +16,28 @@ public class Bar {
 	private String adresse;
 	private LocalTime deb_happ;
 	private LocalTime fin_happ;
-	private String mail;
+	private String siteWeb;
 	
+
+	public Bar(String nom, String localisation, String adresse, LocalTime deb_happ, LocalTime fin_happ,
+			String siteWeb) {
+		super();
+		this.nom = nom;
+		this.localisation = localisation;
+		this.adresse = adresse;
+		this.deb_happ = deb_happ;
+		this.fin_happ = fin_happ;
+		this.siteWeb = siteWeb;
+	}
+
+	public String getSiteWeb() {
+		return siteWeb;
+	}
+
+	public void setSiteWeb(String siteWeb) {
+		this.siteWeb = siteWeb;
+	}
+
 	public Bar(String nom, String localisation, String adresse, LocalTime deb_happ, LocalTime fin_happ) {
 		super();
 		this.nom = nom;
