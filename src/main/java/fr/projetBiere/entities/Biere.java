@@ -18,8 +18,10 @@ public class Biere {
 	private Style style;
 	
 	private double degre;
+	
 	@Column(length = 65555)
 	private String description;
+	
 	public Long getIdBiere() {
 		return idBiere;
 	}

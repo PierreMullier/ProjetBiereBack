@@ -60,4 +60,9 @@ public class BiereRest {
 	public Optional<Biere> getbiereById(@PathVariable Long id){
 		return (Optional<Biere>) biereRepo.findById(id);
 	}
+	
+	@GetMapping("/biere/{nom}")
+	public Optional<Biere> getbiereByName(@PathVariable String nom){
+		return (Optional<Biere>) biereRepo.findByName(nom);
+	}
 }
