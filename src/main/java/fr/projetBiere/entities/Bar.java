@@ -14,12 +14,12 @@ public class Bar {
 	private String nom;
 	private String localisation;
 	private String adresse;
-	private LocalTime deb_happ;
-	private LocalTime fin_happ;
+	private String deb_happ;
+	private String fin_happ;
 	private String siteWeb;
 	
 
-	public Bar(String nom, String localisation, String adresse, LocalTime deb_happ, LocalTime fin_happ,
+	public Bar(String nom, String localisation, String adresse, String deb_happ, String fin_happ,
 			String siteWeb) {
 		super();
 		this.nom = nom;
@@ -38,7 +38,7 @@ public class Bar {
 		this.siteWeb = siteWeb;
 	}
 
-	public Bar(String nom, String localisation, String adresse, LocalTime deb_happ, LocalTime fin_happ) {
+	public Bar(String nom, String localisation, String adresse, String deb_happ, String fin_happ) {
 		super();
 		this.nom = nom;
 		this.localisation = localisation;
@@ -78,16 +78,16 @@ public class Bar {
 	public void setAdresse(String adresse) {
 		this.adresse = adresse;
 	}
-	public LocalTime getDeb_happ() {
+	public String getDeb_happ() {
 		return deb_happ;
 	}
-	public void setDeb_happ(LocalTime deb_happ) {
+	public void setDeb_happ(String deb_happ) {
 		this.deb_happ = deb_happ;
 	}
-	public LocalTime getFin_happ() {
+	public String getFin_happ() {
 		return fin_happ;
 	}
-	public void setFin_happ(LocalTime fin_happ) {
+	public void setFin_happ(String fin_happ) {
 		this.fin_happ = fin_happ;
 	}
 	
