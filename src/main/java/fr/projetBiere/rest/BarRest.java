@@ -87,5 +87,10 @@ public class BarRest {
 		return barRepo.findByCartesPrix(prixMax);
 	}
 	
+	@GetMapping("bar/degre/{degreMax}")
+	public List<Bar> getBarByDegreBeer(@PathVariable double degreMax){
+		return barRepo.findByBiereDegre(degreMax);
+	}
+
 }
 
