@@ -2,6 +2,7 @@ package fr.projetBiere.dao;
 
 import java.util.List;
 
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
 import fr.projetBiere.entities.Bar;
@@ -16,6 +17,7 @@ public interface BarRepository extends CrudRepository<Bar, Long> {
 
 	List<Bar> findByDebHappLessThanAndFinHappGreaterThan(String heure, String heure2);
 
-	//List<Bar> findByCarteLessThan(double prixMax);
+	@Query("select b from Bar b inner join Carte c on c.bar.idBar = b.idBar where c.prix <= ?1")
+	List<Bar> findByCartesPrix(double prixMax);
 
 }

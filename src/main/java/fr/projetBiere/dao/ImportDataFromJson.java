@@ -100,9 +100,9 @@ public class ImportDataFromJson {
             for (Carte carte:cartes) {
                 carteRepo.save(carte);
                 }
-                System.out.println("users saved");
+                System.out.println("cartes saved");
             } catch (IOException e) {
-                System.out.println("Unable to save users: " + e.getMessage());
+                System.out.println("Unable to save cartes: " + e.getMessage());
             }
     }
 }
