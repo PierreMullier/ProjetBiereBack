@@ -65,8 +65,11 @@ public class ProjetBiereApplication implements CommandLineRunner{
 		Preference p1= new Preference("test", 4, 11.8, "Leffe");
 		prefRepo.save(p1);
 		
-		Preference p2 = new Preference("tetest",3,11.8,"Ruby");
+		Preference p2 = new Preference("tetest",5,12.8,"Ruby");
 		prefRepo.save(p2);
+		
+		Preference p3 = new Preference("tetetest",3,10.8,"Kro");
+		prefRepo.save(p3);
 		
 		User u1 = new User("Pierre", "Mullier ", "123@456.789", "test", p1);
 		userRepo.save(u1);
