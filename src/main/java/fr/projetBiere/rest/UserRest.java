@@ -63,7 +63,7 @@ public class UserRest {
 	}
 	
 	@GetMapping("/user/{mail}/{password}")
-	public User getUserMailPassword(@PathVariable String mail,@PathVariable String password) {
+	public User getUserByMailPassword(@PathVariable String mail,@PathVariable String password) {
 		return userRepo.findByMailAndPassword(mail, password);
 	}
 }
