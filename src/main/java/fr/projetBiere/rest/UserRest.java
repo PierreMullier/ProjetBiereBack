@@ -24,12 +24,12 @@ public class UserRest {
 	UserRepository userRepo;
 	
 	@GetMapping("/users")
-	public List<User> getAlluser(){
+	public List<User> getAllUser(){
 		return (List<User>) userRepo.findAll();
 	}
 	
 	@DeleteMapping("user/{id}")
-	public boolean deleteuser(@PathVariable Long id) {
+	public boolean deleteUser(@PathVariable Long id) {
 		Optional<User> b1 = userRepo.findById(id);
 		if(b1.isEmpty()) {
 			return false;
@@ -41,7 +41,7 @@ public class UserRest {
 	}
 	
 	@PostMapping("/user")
-	public User saveClient(@RequestBody User b) {
+	public User saveUser(@RequestBody User b) {
 		return userRepo.save(b);	
 	}
 	
@@ -58,12 +58,12 @@ public class UserRest {
 	}
 	
 	@GetMapping("/users/{id}")
-	public Optional<User> getuserById(@PathVariable Long id){
+	public Optional<User> getUserById(@PathVariable Long id){
 		return (Optional<User>) userRepo.findById(id); 
 	}
 	
 	@GetMapping("/user/{mail}/{password}")
-	public User getUserNomPrenom(@PathVariable String mail,@PathVariable String password) {
+	public User getUserMailPassword(@PathVariable String mail,@PathVariable String password) {
 		return userRepo.findByMailAndPassword(mail, password);
 	}
 }

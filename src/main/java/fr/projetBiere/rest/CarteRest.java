@@ -23,7 +23,7 @@ public class CarteRest {
 	CarteRepository carteRepo;
 	
 	@DeleteMapping("carte/{id}")
-	public boolean deletecarte(@PathVariable Long id) {
+	public boolean deleteCarte(@PathVariable Long id) {
 		Optional<Carte> b1 = carteRepo.findById(id);
 		if(b1.isEmpty()) {
 			return false;
@@ -35,18 +35,17 @@ public class CarteRest {
 	}
 	
 	@PostMapping("/carte")
-	public Carte saveClient(@RequestBody Carte b) {
-		return carteRepo.save(b);	
+	public Carte saveCarte(@RequestBody Carte c) {
+		return carteRepo.save(c);	
 	}
 	
-	
 	@GetMapping("/cartes/bar/{id}")
-	public List<Carte> getcarteByBarId(@PathVariable Long id){
+	public List<Carte> getCarteByBarId(@PathVariable Long id){
 		return (List<Carte>) carteRepo.findByBarIdBar(id);
 	}
 	
 	@GetMapping("/cartes/biere/{id}")
-	public List<Carte> getcarteByBiereId(@PathVariable Long id){
+	public List<Carte> getCarteByBiereId(@PathVariable Long id){
 		return (List<Carte>) carteRepo.findByBiereIdBiere(id);
 	}
 }

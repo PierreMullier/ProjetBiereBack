@@ -42,12 +42,12 @@ public class BarRest {
 	}
 	
 	@PostMapping("/bar")
-	public Bar saveClient(@RequestBody Bar b) {
+	public Bar saveBar(@RequestBody Bar b) {
 		return barRepo.save(b);	
 	}
 	
 	@PutMapping("bar/update/{id}")
-    public Bar editUser(@PathVariable Long id, @RequestBody Bar b) {
+    public Bar editBar	(@PathVariable Long id, @RequestBody Bar b) {
 
         Optional <Bar> b1 = barRepo.findById(id);
         if (b1.isEmpty()) {
@@ -73,7 +73,7 @@ public class BarRest {
 	}
 	
 	@GetMapping("bar/finHapp/{finHapp}")
-	public List<Bar> getBarByHappyHour(@PathVariable String finHapp){
+	public List<Bar> getBarByFinHappyHour(@PathVariable String finHapp){
 		return barRepo.findByFinHapp(finHapp);
 	}
 	

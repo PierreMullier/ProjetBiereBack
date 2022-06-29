@@ -23,12 +23,12 @@ public class CategorieRest {
 	CategorieRepository categorieRepo;
 	
 	@GetMapping("/categories")
-	public List<Categorie> getAllcategorie(){
+	public List<Categorie> getAllCategorie(){
 		return (List<Categorie>) categorieRepo.findAll();
 	}
 	
 	@DeleteMapping("categorie/{id}")
-	public boolean deletecategorie(@PathVariable Long id) {
+	public boolean deleteCategorie(@PathVariable Long id) {
 		Optional<Categorie> b1 = categorieRepo.findById(id);
 		if(b1.isEmpty()) {
 			return false;
@@ -40,12 +40,12 @@ public class CategorieRest {
 	}
 	
 	@PostMapping("/categorie")
-	public Categorie saveClient(@RequestBody Categorie b) {
+	public Categorie saveCategorie(@RequestBody Categorie b) {
 		return categorieRepo.save(b);	
 	}
 	
 	@PutMapping("categorie/update/{id}")
-    public Categorie editUser(@PathVariable Long id, @RequestBody Categorie b) {
+    public Categorie editCategorie(@PathVariable Long id, @RequestBody Categorie b) {
 
         Optional <Categorie> b1 = categorieRepo.findById(id);
         if (b1.isEmpty()) {
@@ -57,7 +57,7 @@ public class CategorieRest {
 	}
 	
 	@GetMapping("/categories/{id}")
-	public Optional<Categorie> getcategorieById(@PathVariable Long id){
+	public Optional<Categorie> getCategorieById(@PathVariable Long id){
 		return (Optional<Categorie>) categorieRepo.findById(id);
 	}
 }

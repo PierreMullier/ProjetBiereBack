@@ -25,12 +25,12 @@ public class PreferenceRest {
 	PreferenceRepository preferenceRepo;
 	
 	@GetMapping("/preferences")
-	public List<Preference> getAllpreference(){
+	public List<Preference> getAllPreference(){
 		return (List<Preference>) preferenceRepo.findAll();
 	}
 	
 	@DeleteMapping("preference/{id}")
-	public boolean deletepreference(@PathVariable Long id) {
+	public boolean deletePreference(@PathVariable Long id) {
 		Optional<Preference> b1 = preferenceRepo.findById(id);
 		if(b1.isEmpty()) {
 			return false;
@@ -42,12 +42,12 @@ public class PreferenceRest {
 	}
 	
 	@PostMapping("/preference")
-	public Preference saveClient(@RequestBody Preference b) {
+	public Preference savePreference(@RequestBody Preference b) {
 		return preferenceRepo.save(b);	
 	}
 	
 	@PutMapping("preference/update/{id}")
-    public Preference editUser(@PathVariable Long id, @RequestBody Preference b) {
+    public Preference editPreference(@PathVariable Long id, @RequestBody Preference b) {
 
         Optional <Preference> b1 = preferenceRepo.findById(id);
         if (b1.isEmpty()) {
@@ -59,7 +59,7 @@ public class PreferenceRest {
 	}
 	
 	@GetMapping("/preferences/{id}")
-	public Optional<Preference> getpreferenceById(@PathVariable Long id){
+	public Optional<Preference> getPreferenceById(@PathVariable Long id){
 		return (Optional<Preference>) preferenceRepo.findById(id);
 	}
 }

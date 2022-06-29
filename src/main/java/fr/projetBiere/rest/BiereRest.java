@@ -23,12 +23,12 @@ public class BiereRest {
 	public BiereRepository biereRepo;
 	
 	@GetMapping("/bieres")
-	public List<Biere> getAllbiere(){
+	public List<Biere> getAllBiere(){
 		return (List<Biere>) biereRepo.findAll();
 	}
 	
 	@DeleteMapping("biere/{id}")
-	public boolean deletebiere(@PathVariable Long id) {
+	public boolean deleteBiere(@PathVariable Long id) {
 		Optional<Biere> b1 = biereRepo.findById(id);
 		if(b1.isEmpty()) {
 			return false;
@@ -40,12 +40,12 @@ public class BiereRest {
 	}
 	
 	@PostMapping("/biere")
-	public Biere saveClient(@RequestBody Biere b) {
+	public Biere saveBiere(@RequestBody Biere b) {
 		return biereRepo.save(b);	
 	}
 	
 	@PutMapping("biere/update/{id}")
-    public Biere editUser(@PathVariable Long id, @RequestBody Biere b) {
+    public Biere editBiere(@PathVariable Long id, @RequestBody Biere b) {
 
         Optional <Biere> b1 = biereRepo.findById(id);
         if (b1.isEmpty()) {
@@ -57,22 +57,22 @@ public class BiereRest {
 	}
 	
 	@GetMapping("/bieres/{id}")
-	public Optional<Biere> getbiereById(@PathVariable Long id){
+	public Optional<Biere> getBiereById(@PathVariable Long id){
 		return (Optional<Biere>) biereRepo.findById(id);
 	}
 	
 	@GetMapping("/biere/nom/{nom}")
-	public Optional<Biere> getbiereByName(@PathVariable String nom){
+	public Optional<Biere> getBiereByName(@PathVariable String nom){
 		return (Optional<Biere>) biereRepo.findByNom(nom);
 	}
 	
 	@GetMapping("/biere/taux/{degre}")
-	public List<Biere> getbiereByAlcool(@PathVariable double degre){
+	public List<Biere> getBiereByAlcool(@PathVariable double degre){
 		return (List<Biere>) biereRepo.findByDegre(degre);
 	}
 	
 	@GetMapping("/biere/style/{style_id_style}")
-	public List<Biere> getbiereByStyle(@PathVariable Long style_id_style){
+	public List<Biere> getBiereByStyle(@PathVariable Long style_id_style){
 		return (List<Biere>) biereRepo.findByStyleIdStyle(style_id_style);
 	}
 }

@@ -24,12 +24,12 @@ public class StyleRest {
 	StyleRepository styleRepo;
 	
 	@GetMapping("/styles")
-	public List<Style> getAllstyle(){
+	public List<Style> getAllStyle(){
 		return (List<Style>) styleRepo.findAll();
 	}
 	
 	@DeleteMapping("style/{id}")
-	public boolean deletestyle(@PathVariable Long id) {
+	public boolean deleteStyle(@PathVariable Long id) {
 		Optional<Style> b1 = styleRepo.findById(id);
 		if(b1.isEmpty()) {
 			return false;
@@ -41,12 +41,12 @@ public class StyleRest {
 	}
 	
 	@PostMapping("/style")
-	public Style saveClient(@RequestBody Style b) {
+	public Style saveStyle(@RequestBody Style b) {
 		return styleRepo.save(b);	
 	}
 	
 	@PutMapping("style/update/{id}")
-    public Style editUser(@PathVariable Long id, @RequestBody Style b) {
+    public Style editStyle(@PathVariable Long id, @RequestBody Style b) {
 
         Optional <Style> b1 = styleRepo.findById(id);
         if (b1.isEmpty()) {
@@ -58,7 +58,7 @@ public class StyleRest {
 	}
 	
 	@GetMapping("/styles/{id}")
-	public Optional<Style> getstyleById(@PathVariable Long id){
+	public Optional<Style> getStyleById(@PathVariable Long id){
 		return (Optional<Style>) styleRepo.findById(id);
 	}
 
