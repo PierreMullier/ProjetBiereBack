@@ -22,9 +22,9 @@ public class Preference {
 	}
 
 
-	public Preference(String nomStype, double prix, double tauxAlcool, String nomBiere) {
+	public Preference(String nomStyle, double prix, double tauxAlcool, String nomBiere) {
 		super();
-		this.nomStyle = nomStype;
+		this.nomStyle = nomStyle;
 		this.prix = prix;
 		this.tauxAlcool = tauxAlcool;
 		this.nomBiere = nomBiere;
@@ -74,8 +74,7 @@ public class Preference {
 	public String getNomBiere() {
 		return nomBiere;
 	}
-
-
+	
 	public void setNomBiere(String nomBiere) {
 		this.nomBiere = nomBiere;
 	}
