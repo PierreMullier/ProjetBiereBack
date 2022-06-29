@@ -23,6 +23,8 @@ public interface BarRepository extends CrudRepository<Bar, Long> {
 	@Query("select b from Bar b inner join Carte c on c.bar.idBar = b.idBar  inner join Biere bi on bi.idBiere = c.biere.idBiere where c.biere.degre  <= ?1" )
 	List<Bar> findByBiereDegre(double degreMax);
 
+	@Query("select b from Bar b inner join Carte c on c.bar.idBar = b.idBar  inner join Biere bi on bi.idBiere = c.biere.idBiere where c.biere.nom LIKE ?1" )
+	List<Bar> findByBiereNom(String nom);
 
 	
 

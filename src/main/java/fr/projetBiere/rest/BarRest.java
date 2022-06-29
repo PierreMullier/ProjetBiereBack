@@ -91,6 +91,10 @@ public class BarRest {
 	public List<Bar> getBarByDegreBeer(@PathVariable double degreMax){
 		return barRepo.findByBiereDegre(degreMax);
 	}
+	@GetMapping("bar/biere/nom/{nom}")
+	public List<Bar> getBarByNomBeer(@PathVariable String nom){
+		return barRepo.findByBiereNom("%"+nom+"%");
+	}
 
 }
 
