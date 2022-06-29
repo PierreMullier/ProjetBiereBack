@@ -63,7 +63,7 @@ public class PreferenceRest {
 		return (Optional<Preference>) preferenceRepo.findById(id);
 	}
 	
-	@GetMapping("preference/maxId")
+	@GetMapping("preference/maxId") 
 	public Preference getLastIdPreference() {
 		return preferenceRepo.findIdByMaxId(); 
 	}

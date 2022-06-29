@@ -21,5 +21,7 @@ public interface BiereRepository extends CrudRepository<Biere, Long> {
 	//("select b from Bar b inner join Carte c on c.bar.idBar = b.idBar  inner join Biere bi on bi.idBiere = c.biere.idBiere where c.biere.nom LIKE ?1" )
 	@Query("select bi from Biere bi inner join Carte c on c.biere.idBiere = bi.idBiere  inner join Bar b on b.idBar = c.bar.idBar where b.nom LIKE ?1" )
 	List<Biere> findByBarNom(String nom);
+	
+
 
 }

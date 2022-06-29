@@ -10,6 +10,6 @@ import fr.projetBiere.entities.Preference;
 public interface PreferenceRepository extends CrudRepository<Preference, Long> {
 
 	@Query("select MAX(pref) from Preference pref" )
-	  Preference findIdByMaxId();
+	  Preference findIdByMaxId(); 
 
 }

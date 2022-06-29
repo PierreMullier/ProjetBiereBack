@@ -80,4 +80,6 @@ public class BiereRest {
 	public List<Biere> getBeerByBarNom(@PathVariable String nom){
 		return biereRepo.findByBarNom("%"+nom+"%");
 	}
+	
+	
 }
