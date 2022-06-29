@@ -75,4 +75,5 @@ public class BiereRest {
 	public List<Biere> getBiereByStyle(@PathVariable Long style_id_style){
 		return (List<Biere>) biereRepo.findByStyleIdStyle(style_id_style);
 	}
+	
 }

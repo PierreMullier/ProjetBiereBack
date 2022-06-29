@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import fr.projetBiere.dao.BarRepository;
 import fr.projetBiere.entities.Bar;
+import fr.projetBiere.entities.Biere;
 
 
 
@@ -91,10 +92,15 @@ public class BarRest {
 	public List<Bar> getBarByDegreBeer(@PathVariable double degreMax){
 		return barRepo.findByBiereDegre(degreMax);
 	}
+	//@GetMapping("bar/{test}/{id}")
+	//public Bar getUnkown(@PathVariable String test, @PathVariable Long id) {
+	//	return barRepo.findBarByUnkown(test, id);
+	//}
 	@GetMapping("bar/biere/nom/{nom}")
 	public List<Bar> getBarByNomBeer(@PathVariable String nom){
 		return barRepo.findByBiereNom("%"+nom+"%");
 	}
+	
 
 }
 

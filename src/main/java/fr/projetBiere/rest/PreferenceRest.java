@@ -62,4 +62,9 @@ public class PreferenceRest {
 	public Optional<Preference> getPreferenceById(@PathVariable Long id){
 		return (Optional<Preference>) preferenceRepo.findById(id);
 	}
+	
+	@GetMapping("/preference/last")
+	public Preference getLastPreference() {
+		return (Preference) preferenceRepo.findLastId();
+	}
 }
