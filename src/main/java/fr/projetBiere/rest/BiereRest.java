@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import fr.projetBiere.dao.BiereRepository;
+import fr.projetBiere.entities.Bar;
 import fr.projetBiere.entities.Biere;
 
 @RestController
@@ -75,5 +76,12 @@ public class BiereRest {
 	public List<Biere> getBiereByStyle(@PathVariable Long style_id_style){
 		return (List<Biere>) biereRepo.findByStyleIdStyle(style_id_style);
 	}
+
+	@GetMapping("bar/nom/biere/{nom}")
+	public List<Biere> getBeerByBarNom(@PathVariable String nom){
+		return biereRepo.findByBarNom("%"+nom+"%");
+	}
+	
+
 	
 }
