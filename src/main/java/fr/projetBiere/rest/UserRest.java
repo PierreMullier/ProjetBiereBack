@@ -66,4 +66,8 @@ public class UserRest {
 	public User getUserByMailPassword(@PathVariable String mail,@PathVariable String password) {
 		return userRepo.findByMailAndPassword(mail, password);
 	}
+//	@PutMapping("user/update/{idUser}/{IdPref}")
+//	public User updateUserPref(@PathVariable Long idUser, @PathVariable Long idPref, @RequestBody User u) {
+//		return userRepo.UpdateIdPrefUser(idPref)
+//	}
 }
