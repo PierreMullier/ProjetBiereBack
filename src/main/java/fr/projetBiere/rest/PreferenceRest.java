@@ -68,4 +68,8 @@ public class PreferenceRest {
 		return preferenceRepo.findIdByMaxId(); 
 
 	}
+	//@PutMapping("preference/user/{id}")
+	//public Preference updatePrefByUser(@PathVariable Long id) {
+	//	return preferenceRepo.editPrefByUserId(id);
+	//}
 }

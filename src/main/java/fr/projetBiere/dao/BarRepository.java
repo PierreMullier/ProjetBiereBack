@@ -29,4 +29,7 @@ public interface BarRepository extends CrudRepository<Bar, Long> {
 	@Query("select b from Bar b where ?1 = ?2")
 	Bar findBarByUnkown(String test,Long id);
 
+	@Query("SELECT b FROM Bar b INNER JOIN Carte c ON c.bar.idBar = b.idBar INNER JOIN Biere bi ON bi.idBiere = c.biere.idBiere INNER JOIN Style s ON bi.style.idStyle=s.idStyle WHERE c.biere.nom LIKE %?1% AND c.prix < ?2 AND c.biere.style.nom LIKE %?3% AND c.biere.degre <?4")
+	List<Bar> findByPref(String nomBiere, double prix, String nomStyle, double taux);
+
 }

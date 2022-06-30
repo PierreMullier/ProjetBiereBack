@@ -101,7 +101,11 @@ public class BarRest {
 	public List<Bar> getBarByNomBeer(@PathVariable String nom){
 		return barRepo.findByBiereNom("%"+nom+"%");
 	}
-	
+	@GetMapping("bar/pref/{nomBiere}/{prix}/{nomStyle}/{taux}")
+	public List<Bar> getBarByPref(@PathVariable String nomBiere, @PathVariable double prix, @PathVariable String nomStyle, @PathVariable double taux){
+		return barRepo.findByPref(nomBiere,prix,nomStyle,taux);
+	}
+			
 
 }
 
