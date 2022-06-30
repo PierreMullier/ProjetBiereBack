@@ -4,87 +4,94 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.IdClass;
 import javax.persistence.ManyToOne;
+import fr.projetBiere.entities.AvisKey;
 
 
 @Entity
+@IdClass(AvisKey.class)
 public class Avis {
-	@Id @GeneratedValue(strategy=GenerationType.IDENTITY) 
-	private Long idAvis;
-	private String description;
-	private String note;
-	private String date;
-	
+	@Id
 	@ManyToOne
-	private User userAvis;
+	private User user;
+	@Id
+	@ManyToOne
+	private Bar bar;
+	private String description;
+	private Double note;
+	private String date;
+
 
 	public Avis() {
 		super();
 	}
 
-	public Avis(Long idAvis, String description, String note, String date, User userAvis) {
+
+	public Avis(User user, Bar bar, String description, Double note, String date) {
 		super();
-		this.idAvis = idAvis;
+		this.user = user;
+		this.bar = bar;
 		this.description = description;
 		this.note = note;
 		this.date = date;
-		this.userAvis = userAvis;
 	}
 
-	public Avis(String description, String note, String date, User userAvis) {
-		super();
-		this.description = description;
-		this.note = note;
-		this.date = date;
-		this.userAvis = userAvis;
+
+	public User getUser() {
+		return user;
 	}
 
-	public Long getIdAvis() {
-		return idAvis;
+
+	public void setUser(User user) {
+		this.user = user;
 	}
 
-	public void setIdAvis(Long idAvis) {
-		this.idAvis = idAvis;
+
+	public Bar getBar() {
+		return bar;
 	}
+
+
+	public void setBar(Bar bar) {
+		this.bar = bar;
+	}
+
 
 	public String getDescription() {
 		return description;
 	}
 
+
 	public void setDescription(String description) {
 		this.description = description;
 	}
 
-	public String getNote() {
+
+	public Double getNote() {
 		return note;
 	}
 
-	public void setNote(String note) {
+
+	public void setNote(Double note) {
 		this.note = note;
 	}
+
 
 	public String getDate() {
 		return date;
 	}
 
+
 	public void setDate(String date) {
 		this.date = date;
 	}
 
-	public User getUserAvis() {
-		return userAvis;
-	}
-
-	public void setUserAvis(User userAvis) {
-		this.userAvis = userAvis;
-	}
 
 	@Override
 	public String toString() {
-		return "Avis [idAvis=" + idAvis + ", description=" + description + ", note=" + note + ", date=" + date
-				+ ", userAvis=" + userAvis + "]";
+		return "Avis [user=" + user + ", bar=" + bar + ", description=" + description + ", note=" + note + ", date="
+				+ date + "]";
 	}
-	
-	
 
 }
