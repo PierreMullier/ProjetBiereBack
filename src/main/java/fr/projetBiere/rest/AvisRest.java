@@ -23,37 +23,37 @@ import fr.projetBiere.entities.User;
 @CrossOrigin("*")
 public class AvisRest {
 
-    @Autowired
-    AvisRepository avisRepo;
+	@Autowired
+	AvisRepository avisRepo;
 
-    @GetMapping("/avis")
-    public List<Avis> getAllAvis(){
-        return (List<Avis>) avisRepo.findAll();
-    }
+	@GetMapping("/avis")
+	public List<Avis> getAllAvis(){
+		return (List<Avis>) avisRepo.findAll();
+	}
 
-    @PostMapping("/avis/save")
-    public Avis saveAvis(@RequestBody Avis av) {
-        return avisRepo.save(av);    
-    }
+	@PostMapping("/avis/save")
+	public Avis saveAvis(@RequestBody Avis av) {
+		return avisRepo.save(av);	
+	}
 
-    @DeleteMapping("avis/{id}")
-    public boolean deleteAvis(@PathVariable Long id) {
-        Optional<Avis> av = avisRepo.findById(id);
-        if(av.isEmpty()) {
-            return false;
-        }else {
-            avisRepo.deleteById(id);
-        }
-        return true;
-    }
+	@DeleteMapping("avis/{id}")
+	public boolean deleteAvis(@PathVariable Long id) {
+		Optional<Avis> av = avisRepo.findById(id);
+		if(av.isEmpty()) {
+			return false;
+		}else {
+			avisRepo.deleteById(id);
+		}
+		return true;
+	}
 
 
-    // insertion d'un avis
-        @PostMapping(value = "/avis/ajout")
-        public Avis insertAvis(@RequestBody Avis av) {
-
-        return avisRepo.save(av);
-        }
-
-       
+	// insertion d'un avis
+		@PostMapping(value = "/avis/ajout")
+		public Avis insertAvis(@RequestBody Avis av) {
+			
+		return avisRepo.save(av);
+		}
+		
+		
 }
