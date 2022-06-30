@@ -17,26 +17,30 @@ public class Avis {
 
     @ManyToOne
     private User userAvis;
+    @ManyToOne
+    private Bar barAvis;
 
     public Avis() {
         super();
     }
 
-    public Avis(Long idAvis, String description, String note, String date, User userAvis) {
+    public Avis(String description, String note, String date, User userAvis, Bar barAvis) {
+        super();
+        this.description = description;
+        this.note = note;
+        this.date = date;
+        this.userAvis = userAvis;
+        this.barAvis = barAvis;
+    }
+
+    public Avis(Long idAvis, String description, String note, String date, User userAvis, Bar barAvis) {
         super();
         this.idAvis = idAvis;
         this.description = description;
         this.note = note;
         this.date = date;
         this.userAvis = userAvis;
-    }
-
-    public Avis(String description, String note, String date, User userAvis) {
-        super();
-        this.description = description;
-        this.note = note;
-        this.date = date;
-        this.userAvis = userAvis;
+        this.barAvis = barAvis;
     }
 
     public Long getIdAvis() {
@@ -79,11 +83,19 @@ public class Avis {
         this.userAvis = userAvis;
     }
 
-    @Override
-    public String toString() {
-        return "Avis [idAvis=" + idAvis + ", description=" + description + ", note=" + note + ", date=" + date
-                + ", userAvis=" + userAvis + "]";
+    public Bar getBarAvis() {
+        return barAvis;
     }
 
+    public void setBarAvis(Bar barAvis) {
+        this.barAvis = barAvis;
+    }
+
+    @Override
+    public String toString() {
+        return "Avis [description=" + description + ", note=" + note + ", date=" + date + ", barAvis=" + barAvis + "]";
+    }
+
+    
 
 }

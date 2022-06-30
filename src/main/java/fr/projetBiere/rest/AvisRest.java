@@ -55,13 +55,5 @@ public class AvisRest {
         return avisRepo.save(av);
         }
 
-        @GetMapping("avis/user/{nom}")
-        public List<Avis> getAvisByNomUser(@PathVariable String nom){
-            return avisRepo.findAvisByUserNom("%"+nom+"%");
-        }
-
-        @GetMapping("avis/bar/{nom}")
-        public List<Avis> getAvisByNomBar(@PathVariable String nom){
-            return avisRepo.findAvisByBarNom("%"+nom+"%");
-        }
+       
 }

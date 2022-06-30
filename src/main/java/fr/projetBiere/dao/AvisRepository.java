@@ -8,8 +8,4 @@ import fr.projetBiere.entities.Avis;
 
 public interface AvisRepository extends CrudRepository<Avis, Long>{
 
-    List<Avis> findAvisByUserNom(String string);
-
-    List<Avis> findAvisByBarNom(String string);
-
 }
