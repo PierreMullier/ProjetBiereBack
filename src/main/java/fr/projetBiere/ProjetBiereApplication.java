@@ -12,6 +12,7 @@ import fr.projetBiere.dao.BarRepository;
 import fr.projetBiere.dao.BiereRepository;
 import fr.projetBiere.dao.CarteRepository;
 import fr.projetBiere.dao.CategorieRepository;
+import fr.projetBiere.dao.GroupeRepository;
 import fr.projetBiere.dao.ImportDataFromJson;
 import fr.projetBiere.dao.PreferenceRepository;
 import fr.projetBiere.dao.StyleRepository;
@@ -19,6 +20,7 @@ import fr.projetBiere.dao.UserRepository;
 import fr.projetBiere.entities.Bar;
 import fr.projetBiere.entities.Biere;
 import fr.projetBiere.entities.Categorie;
+import fr.projetBiere.entities.Groupe;
 import fr.projetBiere.entities.Preference;
 import fr.projetBiere.entities.Style;
 import fr.projetBiere.entities.User;
@@ -39,6 +41,8 @@ public class ProjetBiereApplication implements CommandLineRunner{
 	PreferenceRepository prefRepo;
 	@Autowired
 	CarteRepository carteRepo;
+	@Autowired
+	GroupeRepository groupeRepo;
 	
 	public static void main(String[] args)  {
 		SpringApplication.run(ProjetBiereApplication.class, args);
@@ -73,6 +77,9 @@ public class ProjetBiereApplication implements CommandLineRunner{
 		
 		User u1 = new User("Pierre", "Mullier ", "123@456.789", "test", p1);
 		userRepo.save(u1);
+		
+		Groupe g = new Groupe("test Groupe", u1);
+		groupeRepo.save(g);
 		ImportDataFromJson.insertData(categorieRepo,styleRepo,biereRepo,barRepo,userRepo,carteRepo);
 		System.out.println("run success");
 	}
