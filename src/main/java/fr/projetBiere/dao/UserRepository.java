@@ -9,6 +9,7 @@ public interface UserRepository extends CrudRepository<User, Long>{
 
 	User findByMailAndPassword(String mail, String password);
 	
-	//@Query("Update User u Set u.idPref = ?1 WHERE u.id = ?2")
-	//User UpdateIdPrefUser(Long id_pref,Long id);
+	@Query("SELECT u FROM User u WHERE id= ?1")
+	User getUserByIdModif(Long id_user);
+
 }
