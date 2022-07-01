@@ -13,6 +13,7 @@ import javax.persistence.OneToOne;
 public class Groupe {
 	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long idGroupe;
+	private String nomGroupe;
 	@OneToOne
 	private User owner;
 	@OneToMany
@@ -25,6 +26,12 @@ public class Groupe {
 		super();
 		this.owner = owner;
 		this.membreGroup = membreGroup;
+	}
+	
+	public Groupe(String nomGroupe, User owner) {
+		super();
+		this.nomGroupe = nomGroupe;
+		this.owner = owner;
 	}
 	public Groupe(User owner) {
 		super();
@@ -47,6 +54,12 @@ public class Groupe {
 	}
 	public void setMembreGroup(List<User> membreGroup) {
 		this.membreGroup = membreGroup;
+	}
+	public String getNomGroupe() {
+		return nomGroupe;
+	}
+	public void setNomGroupe(String nomGroupe) {
+		this.nomGroupe = nomGroupe;
 	}
 	
 	

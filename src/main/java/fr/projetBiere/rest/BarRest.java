@@ -92,11 +92,7 @@ public class BarRest {
 	public List<Bar> getBarByDegreBeer(@PathVariable double degreMax){
 		return barRepo.findByBiereDegre(degreMax);
 	}
-	@GetMapping("bar/{test}/{id}") 
-	public Bar getUnkown(@PathVariable String test, @PathVariable Long id) {
-		return barRepo.findBarByUnkown(test,id);
-	}
-	
+
 	@GetMapping("bar/biere/nom/{nom}")
 	public List<Bar> getBarByNomBeer(@PathVariable String nom){
 		return barRepo.findByBiereNom("%"+nom+"%");
@@ -105,7 +101,16 @@ public class BarRest {
 	public List<Bar> getBarByPref(@PathVariable String nomBiere, @PathVariable double prix, @PathVariable String nomStyle, @PathVariable double taux){
 		return barRepo.findByPref(nomBiere,prix,nomStyle,taux);
 	}
-			
+	
+	@GetMapping("bar/biere/categorie/{categorie}")
+	public List<Bar> getBarByCategorieBeer(@PathVariable String categorie){
+		return barRepo.findBarByBiereCatNom("%"+categorie+"%");
+	}	
+	
+	@GetMapping("bar/biere/style/{style}")
+	public List<Bar> getBarByStyleeBeer(@PathVariable String style){
+		return barRepo.findBarByBiereStyleNom(style);
+	}
 
 }
 

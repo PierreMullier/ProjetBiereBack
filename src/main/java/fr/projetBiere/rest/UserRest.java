@@ -59,12 +59,17 @@ public class UserRest {
 	
 	@GetMapping("/users/{id}")
 	public  Optional<User> getUserById(@PathVariable Long id){
-		return  userRepo.findById(id); 
+		return userRepo.findById(id); 
 	}
 	
 	@GetMapping("/user/{mail}/{password}")
 	public User getUserByMailPassword(@PathVariable String mail,@PathVariable String password) {
 		return userRepo.findByMailAndPassword(mail, password);
+	}
+	
+	@GetMapping("/user/{mail}")
+	public User getUserByMail(@PathVariable String mail) {
+		return userRepo.findByMail(mail);
 	}
 	
 	@GetMapping("/user/modif/{id}")
