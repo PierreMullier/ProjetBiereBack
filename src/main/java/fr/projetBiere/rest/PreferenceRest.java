@@ -1,4 +1,4 @@
-package fr.projetBiere.rest;
+ package fr.projetBiere.rest;
 
 import java.util.List;
 import java.util.Optional;
