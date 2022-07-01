@@ -21,7 +21,6 @@ import fr.projetBiere.entities.User;
 public class UserRest {
 
 	@Autowired
-	static
 	UserRepository userRepo;
 	
 	@GetMapping("/users")
@@ -59,7 +58,7 @@ public class UserRest {
 	}
 	
 	@GetMapping("/users/{id}")
-	public static Optional<User> getUserById(@PathVariable Long id){
+	public  Optional<User> getUserById(@PathVariable Long id){
 		return  userRepo.findById(id); 
 	}
 	
@@ -67,6 +66,7 @@ public class UserRest {
 	public User getUserByMailPassword(@PathVariable String mail,@PathVariable String password) {
 		return userRepo.findByMailAndPassword(mail, password);
 	}
+	
 	@GetMapping("/user/modif/{id}")
 	public User getUserByidModif(@PathVariable Long id_user) {
 		return userRepo.getUserByIdModif(id_user);
