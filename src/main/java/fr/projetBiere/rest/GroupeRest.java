@@ -1,4 +1,5 @@
 package fr.projetBiere.rest;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -17,6 +18,7 @@ import fr.projetBiere.entities.Avis;
 import fr.projetBiere.entities.Bar;
 import fr.projetBiere.entities.Groupe;
 import fr.projetBiere.entities.User;
+
 @RestController
 @CrossOrigin("*")
 public class GroupeRest {
@@ -30,7 +32,9 @@ public class GroupeRest {
         return (List<Groupe>) groupeRepo.findAll();
 }
     @PostMapping("/groupe/save/{id_owner}")
-    public Groupe saveGroupe(@RequestBody Groupe gr) {
+    public Groupe saveGroupe(@RequestBody Groupe gr, @PathVariable long id_owner) {
+    	User u = userRepo.getUserByIdModif(id_owner);
+    	gr.setOwner(u);
         return groupeRepo.save(gr);    
     }
 
@@ -50,15 +54,30 @@ public class GroupeRest {
 
         return true;
     }
+    
+    @GetMapping("groupe/user/{id_owner}")
+    public Groupe getGroupebyIdOwner(@PathVariable Long id_owner) {
+    	return groupeRepo.findByOwnerIdUser(id_owner);
+    }
     // insertion personne dans le groupe
     @PutMapping("groupe/{id_groupe}/{mail}")
     public Groupe addUserToGroupe(@PathVariable long id_groupe, @PathVariable String mail) {
-    	Groupe g =null;
-    	User u = userRepo.findByMail(mail);
+    	Groupe g = null;
+    	//	User u = userRepo.findByMail(mail);
     	g= groupeRepo.findByIdModif(id_groupe);
-    	List<User> lu =g.getMembreGroup();
-    	lu.add(u);
-    	g.setMembreGroup(lu);
+    	String[] lu =g.getMembreGroup();
+    	String[] lu1;
+    	if(lu==null) {
+    		 lu1= new String[0];
+    	}
+    	else {
+    		 lu1 =g.getMembreGroup();
+    	}
+    	
+    	int l =lu1.length;
+    	String[] lu2 = new String[l+1];
+    	lu2[l+1]=mail;
+    	g.setMembreGroup(lu2);
     	return groupeRepo.save(g);
     	
     }

@@ -6,7 +6,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
 @Entity
@@ -16,13 +15,12 @@ public class Groupe {
 	private String nomGroupe;
 	@OneToOne
 	private User owner;
-	@OneToMany
-	private List<User> membreGroup;
+	private String[] membreGroup;
 	public Groupe() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Groupe(User owner, List<User> membreGroup) {
+	public Groupe(User owner, String[] membreGroup) {
 		super();
 		this.owner = owner;
 		this.membreGroup = membreGroup;
@@ -49,10 +47,10 @@ public class Groupe {
 	public void setOwner(User owner) {
 		this.owner = owner;
 	}
-	public List<User> getMembreGroup() {
+	public String[] getMembreGroup() {
 		return membreGroup;
 	}
-	public void setMembreGroup(List<User> membreGroup) {
+	public void setMembreGroup(String[] membreGroup) {
 		this.membreGroup = membreGroup;
 	}
 	public String getNomGroupe() {
