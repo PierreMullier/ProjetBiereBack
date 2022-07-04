@@ -79,7 +79,7 @@ public class ProjetBiereApplication implements CommandLineRunner{
 		userRepo.save(u1);
 		
 		Groupe g = new Groupe("test Groupe", u1);
-		groupeRepo.save(g);
+		//groupeRepo.save(g);
 		ImportDataFromJson.insertData(categorieRepo,styleRepo,biereRepo,barRepo,userRepo,carteRepo);
 		System.out.println("run success");
 	}
